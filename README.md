@@ -10,4 +10,6 @@
 
 📃文档地址：http://dove.xcenadmin.top/
 
+> 现在的文档还不怎么全，建议去框架目录`app/test/`下看看我测试框架时写的例子
+
 🛠测试地址:http://dev.xcenadmin.top/
