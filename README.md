@@ -20,4 +20,4 @@
 
 # 🌐 博客文章
 
-<center>http://blog.xcenadmin.top/</center>
+<center>http://blog.xcenadmin.top/category/dove-api-farmwork/</center>
