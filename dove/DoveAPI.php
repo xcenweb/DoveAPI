@@ -11,7 +11,7 @@
 use dove\Debug;
 use dove\Config;
 
-define('DOVE_VERSION','1.0.1');
+define('DOVE_VERSION','1.0.101');
 define('DOVE_START_TIME',microtime(true));
 
 define('ROOT_DIR',str_replace(['\\','//'],'/',dirname(__DIR__)).'/');

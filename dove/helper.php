@@ -113,14 +113,30 @@ function mb_str_right($str, $q, $offset = 0)
 function M($m_n,$def='')
 {
     $m_n = explode('.',$m_n);
-    $m = $m_n[0];
-    $n = $m_n[1];
+    $m = isset($m_n[0])?$m_n[0]:'r';
+    $n = isset($m_n[1])?$m_n[1]:'*';
     if($m=="get"||$m=="g"){
+        if($n=='*') return $_GET;
         return isset($_GET[$n])?$_GET[$n]:$def;
     } elseif ($m=="post"||$m=="p"){
+        if($n=='*') return $_POST;
         return isset($_POST[$n])?$_POST[$n]:$def;
     } elseif ($m=="request"||$m=="r"){
+        if($n=='*') return $_REQUEST;
         return isset($_REQUEST[$n])?$_REQUEST[$n]:$def;
     }
     return false;
+}
+
+/**
+ * 计算存储大小单位
+ * @param string $total 字节数
+ * @return string 返回空间大小
+ */
+function space_total($total=0) {
+	$rule = ['GB'=>1073741824,'MB'=>1048576,'KB'=>1024];
+	foreach($rule as $unit=>$byte){
+		if($total>$byte) return round($total/$byte).$unit;
+	}
+	return $total.'B';
 }

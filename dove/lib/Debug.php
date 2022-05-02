@@ -2,10 +2,11 @@
 declare(strict_types=1);
 namespace dove;
 
-use dove\Config;
-use dove\Route;
 use dove\Log;
 use dove\App;
+use dove\Route;
+use dove\Config;
+use dove\Plugin;
 
 // 抛错
 class Debug
@@ -23,31 +24,19 @@ class Debug
         self::$info = $info;
         self::$file = $file;
         self::$backtrace = array_reverse(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS));
-	      $debug = Config::get('dove','debug',false);
-	      $debug_mode = (Config::get('dove','debug_mode','page')=='page')?true:false;
-	      $pe_debug_mode = (Config::get('dove','pe_debug_mode','page')=='page')?true:false;
-	      ob_clean();
+	    $debug = Config::get('dove','debug',false);
         if(isset($_SERVER["HTTP_X_REQUESTED_WITH"])&&strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
             Log::saveErr(self::$file,self::$info,'(ajax)');
-            $tpl = ($debug)?'':'pe_';
-            die(self::json($tpl.'json'));
+            static::json(($debug)?'json':'pe_json');
         }
-        // @todo:此流程待优化
-        if($debug){
-            // debug
-            Log::saveErr(self::$file,self::$info,'调试模式报错');
-            if($debug_mode) die(static::page());
-            die(static::json());
-        }else{
-            // 生产环境
-            Log::saveErr(self::$file,self::$info,'生产环境报错');
-            if($pe_debug_mode) die(static::page('pe_page'));
-            die(static::json('pe_json'));
-        }
+        Log::saveErr(self::$file,self::$info,($debug)?'调试模式报错':'生产环境报错');
+        $debug_mode = (Config::get('dove','debug_mode','page')=='page')?true:false;
+	    $pe_debug_mode = (Config::get('dove','pe_debug_mode','page')=='page')?true:false;
+        ($debug)?($debug_mode)?static::page('page'):static::json('json'):($pe_debug_mode)?static::page('pe_page'):static::page('json');
     }
 
     // 输出页面
-    private static function page($tpl='page')
+    private static function page($tpl)
     {
         $stack = '';
 	    $line = 1;
@@ -66,25 +55,29 @@ class Debug
 	        'err_file'=>self::$file,
 	        'call_stack'=>str_replace('\\','/',$stack),
 	        'version'=>DOVE_VERSION,
-	        'uncompiled_file'=>str_replace(ROOT_DIR,'',App::$file),
-	        'uncompiled_file_content'=>!defined('FME_VERSION')?(file_exists(App::$file))?htmlspecialchars(file_get_contents(App::$file)):'<font color="red">[File Not Found]</font>':'',
-	        'compiled_file'=>str_replace(ROOT_DIR,'',App::$cachePath),
-	        'compiled_file_content'=>!defined('FME_VERSION')?(file_exists(App::$cachePath))?htmlspecialchars(file_get_contents(App::$cachePath)):'<font color="red">[File Not Found]</font>':'',
 	        'exitTime'=>round(microtime(true)-DOVE_START_TIME,8),
 	    ];
+	    if (Plugin::exists('Compiling')) {
+	        $uncf_content = Plugin::exists('Fme')?(file_exists(App::$file))?htmlspecialchars(file_get_contents(App::$file)):'[File Not Found]':'[File Not Found]';
+	        $cf_content = Plugin::exists('Fme')?(file_exists(App::$cachePath))?htmlspecialchars(file_get_contents(App::$cachePath)):'[File Not Found]':'[File Not Found]';
+	        $array['mistake_file'] = '<div class="mdui-row"><div class="mdui-col-xs-12 mdui-col-sm-6"><div class="mdui-typo"><h3> 未编译文件 </h3><small>'.str_replace(ROOT_DIR,'',App::$file).'</small></div><pre><code>'.$uncf_content.'</code></pre></div><div class="mdui-col-xs-12 mdui-col-sm-6"><div class="mdui-typo"><h3> 编译后文件 </h3><small>'.str_replace(ROOT_DIR,'',App::$cachePath).'</small></div><pre><code>'.$cf_content.'</code></pre></div></div>';
+	    } else {
+	        $content = Plugin::exists('Fme')?(file_exists(App::$file))?htmlspecialchars(file_get_contents(App::$file)):'[File Not Found]':'[File Not Found]';
+	        $array['mistake_file'] = '<div class="mdui-typo"><h3> 发生错误的文件 </h3><small>'.str_replace(ROOT_DIR,'',App::$file).'</small></div><pre><code>'.$content.'</code></pre></div>';
+	    }
         $value = [];
         $string= [];
         foreach($array as $val=>$str){
             $value[] = '{$'.$val.'}';
             $string[]= $str;
         }
-        return str_replace($value,$string,file_get_contents(self::$tplDir.$tpl.'.tpl'));
+        ob_clean();
+        die(str_replace($value,$string,file_get_contents(self::$tplDir.$tpl.'.tpl')));
     }
 
     // 输出json
-    private static function json($tpl='json')
+    private static function json($tpl)
     {
-        header('Content-type: application/json;charset=utf-8');
         $stack = [];
 	   	$line = 1;
 	    foreach(self::$backtrace as $key => $val){
@@ -97,6 +90,8 @@ class Debug
 	   	$info = self::$info;
 	    $file = self::$file;
         $array = require(self::$tplDir.$tpl.'.php');
-        return json_encode($array,JSON_UNESCAPED_UNICODE);
+        ob_clean();
+        header('Content-type: application/json;charset=utf-8');
+        die(json_encode($array,JSON_UNESCAPED_UNICODE));
     }
 }

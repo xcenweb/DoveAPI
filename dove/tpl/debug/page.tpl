@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>哦嚯，出错咯 - DoveAPI</title>
     <link rel="stylesheet" href="{$domain}/static/dove_static/debug/css/mdui.min.css">
-    <link rel="stylesheet" href="{$domain}/static/dove_static/debug/css/vs2015.css">
+    <style>pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{background:#1e1e1e;color:#dcdcdc}.hljs-keyword,.hljs-literal,.hljs-name,.hljs-symbol{color:#569cd6}.hljs-link{color:#569cd6;text-decoration:underline}.hljs-built_in,.hljs-type{color:#4ec9b0}.hljs-class,.hljs-number{color:#b8d7a3}.hljs-meta .hljs-string,.hljs-string{color:#d69d85}.hljs-regexp,.hljs-template-tag{color:#9a5334}.hljs-formula,.hljs-function,.hljs-params,.hljs-subst,.hljs-title{color:#dcdcdc}.hljs-comment,.hljs-quote{color:#57a64a;font-style:italic}.hljs-doctag{color:#608b4e}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-tag{color:#9b9b9b}.hljs-template-variable,.hljs-variable{color:#bd63c5}.hljs-attr,.hljs-attribute{color:#9cdcfe}.hljs-section{color:gold}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-bullet,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-selector-tag{color:#d7ba7d}.hljs-addition{background-color:#144212;display:inline-block;width:100%}.hljs-deletion{background-color:#600;display:inline-block;width:100%}</style>
     <style>
       .hljsln {
           position: relative;
@@ -56,11 +56,6 @@
         <div class="mdui-card-content mdui-center">
           这里是框架的<b>错误页面</b>，出现此页面时说明程序运行<u>可能</u>出现问题，请阅读以下回调信息了解错误详情。<br>
           <hr>
-          查错技巧：<br>
-          1.注意本报错页面的“Error Info”内容和“Call Stack”内容。<br>
-          2.如果“Error Info”中的报错让你摸不着头脑，可以在“Call Stack”中由红色的 {clouse}（有些时候可能没有这个）从下往上逐个排查，也许能帮助你找到触发报错的位置。<br>
-          3.如果你启用了本框架的中文语法扩展，发生错误时其实是指向编译后（缓存）文件，本页面底端有左右两个（在pc或平板的UA下，手机上为上下）支持代码高亮显示的文本域，你只需参考“Error Info”和“Call Stack”以及对比编译前和编译后文件内容。如此你就能更快的找到报错的原因。祝你好运 :)<br>
-          <hr>
           <b>注意：生产环境中请关闭调试模式！</b>
         </div>
       </div>
@@ -76,22 +71,7 @@
         <h3> Call Stack <small> 执行回溯</small></h3>
         <pre>{$call_stack}</pre>
       </div>
-      <div class="mdui-row">
-        <div class="mdui-col-xs-12 mdui-col-sm-6">
-          <div class="mdui-typo">
-            <h3> 未编译文件 </h3>
-            <small>{$uncompiled_file}</small>
-          </div>
-          <pre><code>{$uncompiled_file_content}</code></pre>
-        </div>
-        <div class="mdui-col-xs-12 mdui-col-sm-6">
-          <div class="mdui-typo">
-            <h3> 编译后文件 </h3>
-            <small>{$compiled_file}</small>
-          </div>
-          <pre><code>{$compiled_file_content}</code></pre>
-        </div>
-      </div>
+      {$mistake_file}
       <div class="mdui-typo mdui-text-center">
         <hr>
         <p><b><a class="mdui-text-color-teal" href="http://dove.xcenadmin.top/">DoveAPI V{$version}</a> - 极速上手，快速开发！</b></p>
