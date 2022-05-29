@@ -22,7 +22,7 @@ class App
         $AClist = Config::get('AccessControl');
 
         // 预留的框架管理器(若无用可删
-        if(!!$AClist['FrameworkManage']['entry']&&$baseUrlArr[1]==$AClist['FrameworkManage']['entry']) Plugin::load('Fme',[Route::baseUrl(true),$baseUrl,$AClist],true);
+        if(!!$AClist['FrameworkManage']['entry']&&$baseUrlArr[1]==$AClist['FrameworkManage']['entry']) Plugin::load('fme',[Route::baseUrl(true),$baseUrl,$AClist],true);
 
         /**
          * 1.是否是一个禁止外部访问的一级目录
@@ -44,7 +44,7 @@ class App
         if(!file_exists(self::$file)) Debug::e(404,'路由不存在，路径['.self::$file.']',self::$file);
         if(file_exists(self::$path.'__begin.php')) require self::$path.'__begin.php';
 
-        if(Plugin::exists('Compiling')){
+        if(Plugin::exists('compiling')){
             if(!file_exists(self::$cachePath)){
                 static::mk_cache();
             } else {
@@ -65,7 +65,7 @@ class App
     {
         $handleA = fopen(self::$file,'r');
         $handleC = fopen(self::$cachePath,'w');
-        fwrite($handleC,Plugin::use('Compiling',[fread($handleA,filesize(self::$file))]));
+        fwrite($handleC,Plugin::use('compiling',[fread($handleA,filesize(self::$file))]));
         fclose($handleA);
         fclose($handleC);
         return true;

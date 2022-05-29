@@ -54,16 +54,18 @@ class Debug
 	        'err_info'=>self::$info,
 	        'err_file'=>self::$file,
 	        'call_stack'=>str_replace('\\','/',$stack),
+	        'get_array_list' => static::array_list($_GET),
+	        'post_array_list' => static::array_list($_POST),
 	        'version'=>DOVE_VERSION,
 	        'exitTime'=>round(microtime(true)-DOVE_START_TIME,8),
 	    ];
 	    if (Plugin::exists('Compiling')) {
-	        $uncf_content = Plugin::exists('Fme')?(file_exists(App::$file))?htmlspecialchars(file_get_contents(App::$file)):'[File Not Found]':'[File Not Found]';
-	        $cf_content = Plugin::exists('Fme')?(file_exists(App::$cachePath))?htmlspecialchars(file_get_contents(App::$cachePath)):'[File Not Found]':'[File Not Found]';
+	        $uncf_content = file_exists(App::$file)?htmlspecialchars(file_get_contents(App::$file)):'[File Not Found]';
+	        $cf_content = file_exists(App::$cachePath)?htmlspecialchars(file_get_contents(App::$cachePath)):'[File Not Found]';
 	        $array['mistake_file'] = '<div class="mdui-row"><div class="mdui-col-xs-12 mdui-col-sm-6"><div class="mdui-typo"><h3> 未编译文件 </h3><small>'.str_replace(ROOT_DIR,'',App::$file).'</small></div><pre><code>'.$uncf_content.'</code></pre></div><div class="mdui-col-xs-12 mdui-col-sm-6"><div class="mdui-typo"><h3> 编译后文件 </h3><small>'.str_replace(ROOT_DIR,'',App::$cachePath).'</small></div><pre><code>'.$cf_content.'</code></pre></div></div>';
 	    } else {
-	        $content = Plugin::exists('Fme')?(file_exists(App::$file))?htmlspecialchars(file_get_contents(App::$file)):'[File Not Found]':'[File Not Found]';
-	        $array['mistake_file'] = '<div class="mdui-typo"><h3> 发生错误的文件 </h3><small>'.str_replace(ROOT_DIR,'',App::$file).'</small></div><pre><code>'.$content.'</code></pre></div>';
+	        $content = file_exists(App::$file)?htmlspecialchars(file_get_contents(App::$file)):'[File Not Found]';
+	        $array['mistake_file'] = '<div class="mdui-typo"><h3> 发生错误的文件 </h3><small>'.str_replace(ROOT_DIR,'',App::$file).'</small></div><pre><code>'.$content.'</code></pre>';
 	    }
         $value = [];
         $string= [];
@@ -93,5 +95,14 @@ class Debug
         ob_clean();
         header('Content-type: application/json;charset=utf-8');
         die(json_encode($array,JSON_UNESCAPED_UNICODE));
+    }
+    
+    public static function array_list($array){
+        $return = '';
+        foreach($array as $k=>$v){
+            if($v=='') $v = '<font color="red">NULL</font>';
+            $return.= "<b>$k</b> = $v<br>";
+        }
+        return empty($return)?'<font color="red">--Empty--</font>':$return;
     }
 }

@@ -6,7 +6,9 @@ return [
     'debug' => [
         'file' => $file,
         'info' => $info,
-        'callStack'=>$stack,
+        'call_stack' => $stack,
+        'get' => $_GET,
+        'post' => $POST,
     ],
-    'DoveAPI_version' => DOVE_VERSION,
+    'DoveAPI' => DOVE_VERSION,
 ];

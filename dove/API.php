@@ -22,7 +22,6 @@ class API
         isset($set['origin'])?header('Access-Control-Allow-Origin:'.$set['origin']):header('Access-Control-Allow-Origin:'.$conf['origin']);
         isset($set['method'])?header('Access-Control-Allow-Methods:'.$m):header('Access-Control-Allow-Methods:'.$conf['methods']);
         if(!empty($set)){
-            
             // header
             $add = isset($set['header'])?$set['header']:[];
             static::set_header($conf['def_header']+$add);
