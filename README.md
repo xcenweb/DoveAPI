@@ -21,6 +21,10 @@
 
 <center>http://dev.xcenadmin.top/</center>
 
+# 💻 论坛
+
+<center>http://bbs.xcenadmin.top/</center>
+
 # 🌐 博客文章
 
 <center>http://blog.xcenadmin.top/category/dove-api-farmwork/</center>
