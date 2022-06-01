@@ -12,7 +12,8 @@
 - 方便二次开发(请留版权)
 - 完美支持一个API所需的操作(request、response)
 - 非MVC架构
-- PSR-0、PSR-4规范
+- 访问控制
+- 自带Postman
 
 # 📃 文档地址
 
