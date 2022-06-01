@@ -1,15 +1,18 @@
 ![dove](http://dove.xcenadmin.top/DoveAPI.jpg)
 
 # DoveAPI
-一个专为API开发而生的PHP快速开发框架
+
+快速、简洁、非MVC
 
 - 运行快(虚拟主机上最快0.0015秒，在一台2核服务器上运行速度最快0.000998秒)
 
 ![dove](http://dove.xcenadmin.top/run_time.png)
 
-- 可扩展
+- 可扩展(extend)
 - 方便二次开发(请留版权)
-- 完美支持一个API所需的操作
+- 完美支持一个API所需的操作(request、response)
+- 非MVC架构
+- PSR-0、PSR-4规范
 
 # 📃 文档地址
 
