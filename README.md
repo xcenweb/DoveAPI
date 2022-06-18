@@ -4,17 +4,27 @@
 
 快速、简洁、不同于MVC
 
-### 运行快
+# 安装
 
-- 虚拟主机上最快`0.0015`秒，在一台2核服务器上运行速度最快`0.000998`秒
+使用composer安装框架(到test目录中)：
 
-![dove](http://dove.xcenadmin.top/run_time.png)
+```composer
+composer create-project xcenweb/doveapi test
+```
+
+使用composer更新框架：
+
+```composer
+composer update xcenweb/doveapi
+```
 
 ### 可扩展
 
-- 框架的extend目录可通过include或者namespace等（自动）加载
+- 框架已支持通过composer自由安装使用更多的包，框架的extend目录可通过include或者namespace等（自动）加载
 
 ### 完美支持一个API所需的操作
+
+- 通过`$this->xx()`的方式完成接口的post、get接收和json、xml、void的(统一）返回。
 
 ### 不同于MVC的架构
 

@@ -1,0 +1,36 @@
+{
+    "name": "xcenweb/doveapi",
+    "description": "doveapi framework",
+    "type": "project",
+    "license": "MIT",
+    "keywords": [
+        "framework",
+        "api",
+        "dove"
+    ],
+    "authors": [
+        {
+            "name": "xcenweb",
+            "email": "xcenweb@qq.com"
+        }
+    ],
+    "homepage": "http://dove.xcenadmin.top",
+    "support": {
+        "issues": "https://github.com/xcenweb/DoveAPI/issues",
+        "source": "https://github.com/xcenweb/DoveAPI",
+        "docs": "http://dove.xcenadmin.top/"
+    },
+    "require": {
+        "php": ">=7.4.3",
+        "xcenweb/doveapi-core": "@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "extend\\"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

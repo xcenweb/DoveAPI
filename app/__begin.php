@@ -1,5 +1,8 @@
 <?php
-API::start([
+$this->start([
+    // 跨域设置
+    'origin' => '*',
+
     // 设置声明的请求方法
     'methods' => '*',
 
@@ -11,3 +14,4 @@ API::start([
     // 设置phpini
     'ini' => [],
 ]);
+?>

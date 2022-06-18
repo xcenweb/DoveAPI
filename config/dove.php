@@ -10,7 +10,7 @@ return [
 	'debug_mode' => 'page',
 
     // 非debug模式(生产环境)下错误返回形式 json/page
-	'pe_debug_mode' => 'page',
+	'pe_debug_mode' => 'json',
 
     // 是否开启debug-log记录
     'error_log'=> true,
