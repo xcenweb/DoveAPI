@@ -1,15 +1,17 @@
-![dove](http://dove.xcenadmin.top/DoveAPI.jpg)
+![](http://dove.xcenadmin.top/DoveAPI.jpg)
+
+[![Latest Stable Version](http://poser.pugx.org/xcenweb/doveapi/v)](https://packagist.org/packages/xcenweb/doveapi) [![Total Downloads](http://poser.pugx.org/xcenweb/doveapi/downloads)](https://packagist.org/packages/xcenweb/doveapi) [![Latest Unstable Version](http://poser.pugx.org/xcenweb/doveapi/v/unstable)](https://packagist.org/packages/xcenweb/doveapi) [![License](http://poser.pugx.org/xcenweb/doveapi/license)](https://packagist.org/packages/xcenweb/doveapi)
 
 # DoveAPI
 
-快速、简洁、不同于MVC
+简洁、轻量、不同于MVC
 
 # 安装
 
-使用composer安装框架(到test目录中)：
+使用composer安装本框架：
 
 ```composer
-composer create-project xcenweb/doveapi test
+composer create-project xcenweb/doveapi
 ```
 
 使用composer更新框架：
