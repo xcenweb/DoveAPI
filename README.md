@@ -6,20 +6,6 @@
 
 简洁、轻量、不同于MVC
 
-# 安装
-
-使用composer安装本框架：
-
-```composer
-composer create-project xcenweb/doveapi
-```
-
-使用composer更新框架：
-
-```composer
-composer update xcenweb/doveapi
-```
-
 ### 可扩展
 
 - 框架已支持通过composer自由安装使用更多的包，框架的extend目录可通过include或者namespace等（自动）加载
@@ -33,6 +19,20 @@ composer update xcenweb/doveapi
 - 持续探索中...
 
 ### 访问控制
+
+# 安装
+
+使用composer安装本框架：
+
+```composer
+composer create-project xcenweb/doveapi
+```
+
+使用composer更新框架：
+
+```composer
+composer update xcenweb/doveapi
+```
 
 # 📃 文档地址
 
