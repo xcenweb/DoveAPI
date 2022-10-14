@@ -16,12 +16,12 @@
 			<font size="4" color="#5292FF">DoveAPI</font><hr>
 			<p>Hello World! 感谢你使用本框架！你可以通过以下途径学习DoveAPI的使用方法：</p>
 
-			<a class="button" href="http://dove.xcenadmin.top/#/v1.0/3_1_%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84" target="_blank">📃框架文档</a>
+			<a class="button" href="https://www.kancloud.cn/xucene/doveapi" target="_blank">📃框架文档</a>
 			<a class="button" onclick="alert('这个呢，，，暂时还没有考虑。。。');" target="_blank">📺️视频教程</a><a class="button" href="unknown/">👍️体验一波报错页面</a>
 			<a class="button" href="response">👍 输出JSON</a>
 			<a class="button" href="response?q=xml">👍 输出XML</a><hr>
 
-			<font size="2">当前DoveAPI框架版本：
+			<font size="2">DoveAPI核心版本：
 			    <font color="#5292FF">v<?php echo DOVE_VERSION ?> </font>
 			</font><br>
 			<font size="2">本次加载时长：

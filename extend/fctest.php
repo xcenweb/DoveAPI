@@ -1,5 +1,5 @@
 <?php
-// 不使用命名空间
+// 引入调用
 class test
 {
     // include 'fctest.php';
