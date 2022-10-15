@@ -17,13 +17,4 @@ return [
         // www.xcenadmin.top => app/index.php
         '__INDEX__' => '',
     ],
-
-    // 框架管理器设置(计划中
-    'fme_setting' => [
-        'switch' => false,    //管理器功能开关
-        'username' => 'admin',//用户名
-        'password' => 'admin',//密码
-        'ip' => false,        //ip限制
-        'safecode' => '&0oO0$#', //加密密码，尽量使用随机密码生成器生成
-    ],
 ];
