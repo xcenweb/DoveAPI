@@ -1,6 +1,7 @@
 <?php
-
-if (M('g.q') == 'xml') {
+print_r(M('g.only'));
+exit();
+if (M('get.q') == 'xml') {
     // 输出模板xml
     $this->response->mxml(true,666,'this is DoveAPI response XML',[
         'version'=>DOVE_VERSION,
