@@ -18,7 +18,7 @@
 
 			<a class="button" href="https://www.kancloud.cn/xucene/doveapi" target="_blank">📃框架文档</a>
 			<a class="button" onclick="alert('这个呢，，，暂时还没有考虑。。。');" target="_blank">📺️视频教程</a><a class="button" href="unknown/">👍️体验一波报错页面</a>
-			<a class="button" href="response">👍 输出JSON</a>
+			<a class="button" href="response?json">👍 输出JSON</a>
 			<a class="button" href="response?q=xml">👍 输出XML</a><hr>
 
 			<font size="2">DoveAPI核心版本：
