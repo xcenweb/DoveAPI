@@ -6,19 +6,19 @@
 
 轻量、简洁、不同于MVC
 
-#### 可扩展
 
-- 框架已支持通过composer自由安装使用更多的包，框架的extend目录可通过include或者namespace等（自动）加载
+####  可扩展
 
-#### 完美支持一个API所需的操作
+ 框架已支持通过composer自由安装使用更多的包，框架的extend目录可通过include或者namespace等（自动）加载
 
-- 通过`$this->xx()`的方式完成接口的post、get接收和json、xml、void的(统一）返回。
+####  完美支持一个API所需的操作
 
-#### 不同于MVC的架构
+ 通过 `$this->xx()` 的面向方式即可完成接口的post、get接收和json、xml、html、void的统一式返回。
 
-- 持续探索中...
+####  不同于MVC的架构
 
-#### 访问控制
+ 持续探索中...
+
 
 # 安装
 
