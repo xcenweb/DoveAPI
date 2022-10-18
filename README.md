@@ -25,7 +25,7 @@
 使用composer安装本框架：
 
 ```composer
-composer create-project xcenweb/doveapi
+composer create-project xcenweb/doveapi ./
 ```
 
 使用composer更新框架：
