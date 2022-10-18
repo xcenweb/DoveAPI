@@ -36,12 +36,12 @@ composer update xcenweb/doveapi
 
 # 📃 文档地址
 
-<center>https://www.kancloud.cn/xucene/doveapi</center>
+https://www.kancloud.cn/xucene/doveapi
 
 <!--# 💻 论坛
 
-<center>http://bbs.xcenadmin.top/</center>
+http://bbs.xcenadmin.top/
 
 # 🌐 博客文章
 
-<center>http://blog.xcenadmin.top/category/dove-api-farmwork/</center>-->
+http://blog.xcenadmin.top/category/dove-api-farmwork/-->
