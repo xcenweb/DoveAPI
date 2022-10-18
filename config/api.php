@@ -13,10 +13,13 @@ return [
     // 默认自动加载的header设置
     'header' => [
         'X-Powered-By: DoveAPI-Framework',
+		// 'X-Powered-By: DoveAPI-Framework' => false,// 允许相同且多个类型
     ],
 
     // 默认自动修改的ini设置
-    'ini' => [],
+    'ini' => [
+		'display_errors' => 0,
+	],
 
     // 统一执返 $response->uni();
     // 可选 json/xml/void/mjson/mxml
