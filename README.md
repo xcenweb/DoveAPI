@@ -22,7 +22,7 @@
 
 # ⚙️ 安装
 
-使用composer安装本框架：
+使用composer安装框架：
 
 ```composer
 composer create-project xcenweb/doveapi ./
