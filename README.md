@@ -13,7 +13,7 @@
 
 ####  - 完美支持一个API所需的操作
 
- 通过 `$this->xx()` 的面向方式即可完成接口的post、get接收和json、xml、html、void的统一式返回。
+ 通过 `$this->xx()` 的OOP(面向对象程序)方式即可完成接口的post、get接收和json、xml、html、void的统一式返回。
 
 ####  - 不同于MVC的架构
 
