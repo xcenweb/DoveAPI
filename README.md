@@ -9,20 +9,20 @@
 
 ####  - 可扩展
 
- 框架已支持通过composer自由安装使用更多的包，框架的extend目录可通过include或者namespace等（自动）加载
+ 框架支持通过composer自由安装和使用更多的pack，框架的extend目录下的文件可通过include或者namespace等（自动）加载
 
 ####  - 完美支持一个API所需的操作
 
- 通过 `$this->xx()` 的面向方式即可完成接口的post、get接收和json、xml、html、void的统一式返回。
+ 通过 `$this->xx()` 的OOP(面向对象程序)方式即可完成接口的post、get接收和json、xml、html、void的统一式返回。
 
 ####  - 不同于MVC的架构
 
- 持续探索中...
+ 路由即路径，更加简单易懂的结构。
 
 
 # ⚙️ 安装
 
-使用composer安装本框架：
+使用composer安装框架：
 
 ```composer
 composer create-project xcenweb/doveapi ./
