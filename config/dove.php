@@ -13,8 +13,8 @@ return [
 	'pe_debug_mode' => 'json',
 	
 	// 设置生产环境下报错返回json、tpl文件位置
-	'pe_debug_mode_json_path' => ROOT_DIR.'vendor/xcenweb/doveapi-core/src/tpl/debug/pe_json.php',
-	'pe_debug_mode_page_path' => ROOT_DIR.'vendor/xcenweb/doveapi-core/src/tpl/debug/pe_page.tpl',
+	'pe_debug_mode_json_path' => DOVE_DATA_DIR.'tpl/debug/pe_json.php',
+	'pe_debug_mode_page_path' => DOVE_DATA_DIR.'tpl/debug/pe_page.tpl',
 	
 	// 不建议自定义修改。设置开发环境下报错返回json、tpl文件位置
 	'debug_mode_json_path' => ROOT_DIR.'vendor/xcenweb/doveapi-core/src/tpl/debug/json.php',
