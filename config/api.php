@@ -18,7 +18,7 @@ return [
 
     // 默认自动修改的ini设置
     'ini' => [
-		'display_errors' => 0,
+		// 'display_errors' => 0,
 	],
 
     // 统一执返 $response->uni();
