@@ -16,8 +16,8 @@ if(M('get.only') == 'json') {
     ]);
 }
 
-// 设置统一返回 json/xml/void mjson/mxml
+// 设置统一输出 json/xml/void mjson/mxml
 $this->response->set_uni('mjson');
 
-// 统一返回
+// 统一输出
 $this->response->uni(true, 404, '姿势似乎不正确？');
