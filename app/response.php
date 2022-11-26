@@ -8,7 +8,7 @@ if (M('get.q') == 'xml') {
     ]);
 }
 
-if(M('get.only') == 'json') {
+if(M('get.') == 'json') {
     // 输出模板json，输出后后面的不会被运行
     $this->response->mjson(true, 200, 'this is DoveAPI response JSON',[
         'version' => DOVE_VERSION,
