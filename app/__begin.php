@@ -1,4 +1,5 @@
 <?php
+// 此级目录下所有的header、ini设置
 $this->start([
     // 跨域设置
     'origin' => '*',

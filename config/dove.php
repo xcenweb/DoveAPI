@@ -3,6 +3,10 @@
 // 框架配置项
 
 return [
+    
+    // TODO 是否开启中文语法，仅支持 app/* 下中文化
+    'cncode' => false,
+
     // 开启调试模式
 	'debug' => true,
 
@@ -16,7 +20,7 @@ return [
 	'pe_debug_mode_json_path' => DOVE_DATA_DIR.'tpl/debug/pe_json.php',
 	'pe_debug_mode_page_path' => DOVE_DATA_DIR.'tpl/debug/pe_page.tpl',
 	
-	// 不建议自定义修改。设置开发环境下报错返回json、tpl文件位置
+	// 不建议自定义修改。设置开发环境下报错返回json、tpl文件位置(框架内置)
 	'debug_mode_json_path' => ROOT_DIR.'vendor/xcenweb/doveapi-core/src/tpl/debug/json.php',
 	'debug_mode_page_path' => ROOT_DIR.'vendor/xcenweb/doveapi-core/src/tpl/debug/page.tpl',
 	
