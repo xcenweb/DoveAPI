@@ -31,6 +31,12 @@
 composer create-project xcenweb/doveapi ./
 ```
 
+目前推荐直接安装开发版本
+
+```composer
+composer create-project xcenweb/doveapi:dev-main ./
+```
+
 使用composer更新框架：
 
 ```composer
