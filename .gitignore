@@ -1,3 +1,10 @@
 composer.lock
-config/fme.php
+
+# develop project test tools
 app/dev
+
+# develop project test datas
+data/cache/file
+
+# future plugin
+config/fme.php

@@ -16,8 +16,8 @@
 			<font size="4" color="#5292FF">DoveAPI</font><hr>
 			<p>Hello World! 感谢你使用本框架！</p>
 
-			<a class="button" href="https://www.kancloud.cn/xucene/doveapi" target="_blank">框架文档</a>
-			<a class="button" onclick="alert('这个呢，，，暂时还没有考虑。。。');" target="_blank">视频教程</a><a class="button" href="unknown/">️体验一波报错页面</a><br>
+			<a class="button" href="https://xcenweb.github.io/docs/doveapi/" target="_blank">框架文档</a>
+			<a class="button" onclick="alert('这个呢，，，暂时还没有考虑。。。');" target="_blank">视频教程</a><a class="button" href="unknown/">报错页面</a><br>
 			<a class="button" href="response?json">输出 JSON</a>
 			<a class="button" href="response?q=xml">输出 XML</a><hr>
 
