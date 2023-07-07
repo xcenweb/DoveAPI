@@ -1,10 +1,14 @@
-composer.lock
-
 # develop project test tools
 app/dev
 
 # develop project test datas
 data/cache/file
 
+# about composer
+composer.lock
+
 # future plugin
 config/fme.php
+
+# about vscode
+.VsCodeCounter
