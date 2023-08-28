@@ -7,27 +7,23 @@
 
  [Github](https://github.com/xcenweb/DoveAPI) | [码云(Gitee)](https://gitee.com/xcenweb/DoveAPI)
 
-- 整顿一下，再次出发！
-
-- 轻量、简洁、约定式路由
-
-
-**- 可扩展**
+**▶ 可扩展**
 
 框架支持通过 `composer` 自由安装和使用更多的包，框架 `extend` 目录下的文件可通过 `include` 或者 `namespace` 等（自动）加载
 
-**- 支持中文编程**
+**▶ 支持中文编程**
 
 内置自研的 `中文代码编译器`，使您不再对一堆字母发愁，像写博客一样写代码～
 
-**- 完美支持一个API所需的操作**
+**▶ 完美支持一个API所需的操作**
 
 通过 `dove()->xx()` 即可完成接口的 post、get 接收和返回 json、xml、html、void。
 
-**- 不同于MVC的架构**
+**▶ 不同于MVC的架构**
 
 约定式路由，路径即路由，更加简单易管理的项目结构。
 
+<br>
 
 # ⚙️ 安装
 
@@ -48,6 +44,7 @@ composer create-project xcenweb/doveapi:dev-main ./
 composer update xcenweb/doveapi
 ```
 
+<br>
 
 # ✅ TODO LIST
 
@@ -70,11 +67,26 @@ composer update xcenweb/doveapi
   - [ ] `i18n`语言国际化
   - [ ] `view` 模板引擎
 
+<br>
+
+# 赞助 & 感谢列表
+
+<img src="https://img1.imgtp.com/2023/08/28/nQiQUn5d.jpg" height="240px"/>
+
+感谢以下所有赞助者，
+同时感谢所有参与贡献的开发者！
+
+| 赞助者 | 赞助金额 | 备注 |
+| :----- | :------- | :--- |
+|  |  |  |
+
+<br>
 
 # 📃 文档
 
 https://xcenweb.github.io/docs/doveapi/
 
+<br>
 
 # 💻 QQ部落
 
