@@ -25,7 +25,7 @@ return [
     'default_file' => 'index.php',
 
     // 禁止被访问的目录名，被禁止后访问会返回框架404错误
-    'padlock' => ['dev'],
+    'padlock' => [],
 
     // TODO 指定路径绑定域名
     'band' => [
