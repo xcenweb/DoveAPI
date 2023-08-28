@@ -58,7 +58,7 @@ composer update xcenweb/doveapi
   - [x] 独立化 `Debug` config配置
   - [x] 取消 `Log::save()` 方法
   - [x] 独立化 `Log` config配置
-  - [ ] `AccessControl.php`中所有配置项并入`dove.php`
+  - [x] `AccessControl.php`中所有配置项并入`dove.php`
   - [ ] 框架组件化
   - [ ] 完善中文语法设计及编译器
   - [x] 使用 `dove()->todo` 方式代替 `$this->todo`，并调整 config/api.php 相关配置
