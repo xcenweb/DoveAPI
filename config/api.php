@@ -1,7 +1,9 @@
 <?php
+// DoveAPI 框架api配置文件
+
 return [
 
-    // $this->start();全局自动运行
+    // 全局自动运行 dove()->start();
     'autoload' => false,
 
     // 默认的声明的请求方法，多个用半角逗号隔开

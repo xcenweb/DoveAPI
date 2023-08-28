@@ -1,10 +1,7 @@
-<?php 
+<?php
+// 框架通用数据库配置 可设置多个类型的数据库信息
+// Medoo文档：https://medoo.in/doc
 
-// 数据库配置 可设置多个类型的数据库信息
-// 这里写注释乱且不直观，请到框架文档里查看
-
-// @done $con = Medoo(config('db','index',[]));
-// @done $con = Medoo('加载配置>>config');
 return [
     'mysql_config' => [
         'type' => 'mysql',

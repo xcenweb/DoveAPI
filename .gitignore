@@ -1,5 +1,6 @@
 # develop project test tools
 app/dev
+app/dev.php
 
 # develop project test datas
 data/cache/file

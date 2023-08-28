@@ -1,9 +1,11 @@
 <?php
-// 缓存设置
+// DoveAPI 框架缓存设置
+
 return [
+
     // 文件缓存
     'file' => [
-        'path' => DOVE_DATA_DIR.'cache/file/',// 缓存文件存储路径
+        'path' => DOVE_RUNTIME_DIR.'cache/file/',// 缓存文件存储路径
         'suffix' => '.data',// 缓存文件后缀
         'compress_level' => 6,// 数据压缩级别 0～9
     ],
@@ -16,4 +18,5 @@ return [
         'min_saving' => 0.2,// 数据压缩率 0～1
         'auto_compress' => false,// 大值自动压缩
     ],
+
 ];

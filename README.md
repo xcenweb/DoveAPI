@@ -2,11 +2,10 @@
 
 [![Latest Stable Version](http://poser.pugx.org/xcenweb/doveapi/v)](https://packagist.org/packages/xcenweb/doveapi) [![Total Downloads](http://poser.pugx.org/xcenweb/doveapi/downloads)](https://packagist.org/packages/xcenweb/doveapi) [![Latest Unstable Version](http://poser.pugx.org/xcenweb/doveapi/v/unstable)](https://packagist.org/packages/xcenweb/doveapi) [![License](http://poser.pugx.org/xcenweb/doveapi/license)](https://packagist.org/packages/xcenweb/doveapi)
 
+
 # 🕊 DoveAPI
 
-
  [Github](https://github.com/xcenweb/DoveAPI) | [码云(Gitee)](https://gitee.com/xcenweb/DoveAPI)
-
 
 - 整顿一下，再次出发！
 
@@ -15,15 +14,15 @@
 
 **- 可扩展**
 
-框架支持通过composer自由安装和使用更多的pack，框架的extend目录下的文件可通过include或者namespace等（自动）加载
+框架支持通过 `composer` 自由安装和使用更多的包，框架 `extend` 目录下的文件可通过 `include` 或者 `namespace` 等（自动）加载
 
 **- 支持中文编程**
 
-内置自研的中文代码编译器，使您不再对一堆字母发愁，像写博客一样写代码～
+内置自研的 `中文代码编译器`，使您不再对一堆字母发愁，像写博客一样写代码～
 
 **- 完美支持一个API所需的操作**
 
-通过 `$this->xx()` 的 OOP（面向对象程序）方式即可完成接口的 post、get 接收和 json、xml、html、void 等统一式返回。
+通过 `dove()->xx()` 即可完成接口的 post、get 接收和返回 json、xml、html、void。
 
 **- 不同于MVC的架构**
 
@@ -49,15 +48,27 @@ composer create-project xcenweb/doveapi:dev-main ./
 composer update xcenweb/doveapi
 ```
 
+
 # ✅ TODO LIST
 
-能不能实现就看我有没有时间啦（迫真）
+这些功能都已经着手开发了，欢迎与我一起实现这些令人振奋的功能！
 
+- 框架
+  - [x] 约定式路由
+  - [x] 独立化 `Debug` config配置
+  - [x] 取消 `Log::save()` 方法
+  - [x] 独立化 `Log` config配置
+  - [ ] `AccessControl.php`中所有配置项并入`dove.php`
+  - [ ] 框架组件化
   - [ ] 完善中文语法设计及编译器
-  - [ ] 解决 `$this->xx` 部分类方法编辑器没有提示的问题
-  - [ ] 框架组件化探索（基于composer）
-  - [ ] 完善的框架文档
-  - [ ] `fme`、`i18n` 等组件的开发上线
+  - [x] 使用 `dove()->todo` 方式代替 `$this->todo`，并调整 config/api.php 相关配置
+  - [ ] 完善的框架文档（2023.8.1 正在实现）
+
+
+- 组件
+  - [ ] `fme` 框架管理器
+  - [ ] `i18n`语言国际化
+  - [ ] `view` 模板引擎
 
 
 # 📃 文档

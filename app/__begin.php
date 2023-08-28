@@ -1,6 +1,8 @@
 <?php
 // 此级目录下所有的header、ini设置
-$this->start([
+
+dove()->start([
+
     // 跨域设置
     'origin' => '*',
 
@@ -14,4 +16,5 @@ $this->start([
 
     // 设置phpini
     'ini' => [],
+
 ]);
