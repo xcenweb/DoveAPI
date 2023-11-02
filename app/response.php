@@ -16,7 +16,7 @@ if(M('get.') == 'json') {
     ]);
 }
 
-// 设置统一输出 json/xml/void mjson/mxml
+// 设置统一输出 json/xml/void、mjson/mxml
 dove()->response->set_uni('mjson');
 
 // 统一输出
