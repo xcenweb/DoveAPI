@@ -47,7 +47,7 @@ composer update xcenweb/doveapi
 
 # ✅ TODO LIST
 
-这些功能都已经着手开发了，欢迎与我一起实现这些令人振奋的功能！
+将来会完成的工作
 
 - 框架
   - [x] 约定式路由
@@ -68,11 +68,6 @@ composer update xcenweb/doveapi
 
 
 # 赞助 & 感谢列表
-
-<img src="https://s1.ax1x.com/2023/08/28/pPaUc1P.png" height="230px"/>
-
-感谢以下所有赞助者，
-同时感谢所有参与贡献的开发者！
 
 | 赞助者 | 赞助金额 | 备注 |
 | :----- | :------- | :--- |
