@@ -23,16 +23,16 @@
 
 约定式路由，路径即路由，更加简单易管理的项目结构。
 
-<br>
 
 # ⚙️ 安装
 
-通过composer安装框架：
+通过 composer 创建项目：
+
 ```composer
 composer create-project xcenweb/doveapi ./
 ```
 
-⚠️目前推荐直接安装开发版本
+⚠️推荐加上 :dev-main
 
 ```composer
 composer create-project xcenweb/doveapi:dev-main ./
@@ -44,7 +44,6 @@ composer create-project xcenweb/doveapi:dev-main ./
 composer update xcenweb/doveapi
 ```
 
-<br>
 
 # ✅ TODO LIST
 
@@ -67,7 +66,6 @@ composer update xcenweb/doveapi
   - [ ] `i18n`语言国际化
   - [ ] `view` 模板引擎
 
-<br>
 
 # 赞助 & 感谢列表
 
@@ -80,13 +78,11 @@ composer update xcenweb/doveapi
 | :----- | :------- | :--- |
 |  |  |  |
 
-<br>
 
 # 📃 文档
 
 https://xcenweb.github.io/docs/doveapi/
 
-<br>
 
 # 💻 QQ部落
 
