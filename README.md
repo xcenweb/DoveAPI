@@ -5,7 +5,7 @@
 
 # 🕊 DoveAPI
 
- [Github](https://github.com/xcenweb/DoveAPI) | [码云(Gitee)](https://gitee.com/xcenweb/DoveAPI)
+ [Github](https://github.com/xcenweb/DoveAPI) | [Gitee](https://gitee.com/xcenweb/DoveAPI)
 
 **▶ 可扩展**
 
