@@ -5,7 +5,7 @@
 
 # 🕊 DoveAPI
 
- [Github](https://github.com/xcenweb/DoveAPI) | [码云(Gitee)](https://gitee.com/xcenweb/DoveAPI)
+ [Github](https://github.com/xcenweb/DoveAPI) | [Gitee](https://gitee.com/xcenweb/DoveAPI)
 
 **▶ 可扩展**
 
@@ -23,16 +23,16 @@
 
 约定式路由，路径即路由，更加简单易管理的项目结构。
 
-<br>
 
 # ⚙️ 安装
 
-通过composer安装框架：
+通过 composer 创建项目：
+
 ```composer
 composer create-project xcenweb/doveapi ./
 ```
 
-⚠️目前推荐直接安装开发版本
+⚠️推荐加上 :dev-main
 
 ```composer
 composer create-project xcenweb/doveapi:dev-main ./
@@ -44,11 +44,10 @@ composer create-project xcenweb/doveapi:dev-main ./
 composer update xcenweb/doveapi
 ```
 
-<br>
 
 # ✅ TODO LIST
 
-这些功能都已经着手开发了，欢迎与我一起实现这些令人振奋的功能！
+将来会完成的工作
 
 - 框架
   - [x] 约定式路由
@@ -67,26 +66,18 @@ composer update xcenweb/doveapi
   - [ ] `i18n`语言国际化
   - [ ] `view` 模板引擎
 
-<br>
 
 # 赞助 & 感谢列表
-
-<img src="https://s1.ax1x.com/2023/08/28/pPaUc1P.png" height="230px"/>
-
-感谢以下所有赞助者，
-同时感谢所有参与贡献的开发者！
 
 | 赞助者 | 赞助金额 | 备注 |
 | :----- | :------- | :--- |
 |  |  |  |
 
-<br>
 
 # 📃 文档
 
 https://xcenweb.github.io/docs/doveapi/
 
-<br>
 
 # 💻 QQ部落
 
