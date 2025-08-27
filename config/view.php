@@ -1,6 +1,6 @@
 <?php
 // DoveAPI 框架视图模板配置
-// 这个功能只有基础功能，只能满足部分文档说明的操作，欢迎安装使用swig等开源模板
+// TODO 这个模块目前只有基础功能，只能满足部分文档说明的操作，欢迎安装使用swig等开源模板
 
 return [
 
@@ -8,6 +8,6 @@ return [
     'path' => DOVE_VIEW_DIR,
 
     // 模板文件后缀名
-    'suffix' => 'tpl',
+    'suffix' => 'html',
 
 ];

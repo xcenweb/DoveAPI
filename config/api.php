@@ -15,7 +15,7 @@ return [
     // 默认自动加载的header设置
     'header' => [
         'X-Powered-By: DoveAPI-Framework',
-		// 'X-Powered-By: DoveAPI-Framework' => false,// 允许相同且多个类型
+		// 'X-Powered-By: DoveAPI-Framework' => false, // 允许相同且多个类型
     ],
 
     // 默认自动修改的ini设置
@@ -29,14 +29,14 @@ return [
 
     // 模板 mjson、mxml方法通用
     'response_temps' => [
-        //成功 值=>默认
+        // 成功 值=>默认
         true => [
             'code'   => 200,
             'message'=> '成功',
             'data'   => [],
         ],
     
-        //失败 值=>默认
+        // 失败 值=>默认
         false => [
             'code'   => 500,
             'message'=> '发生错误',

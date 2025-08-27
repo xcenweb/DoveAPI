@@ -91,3 +91,5 @@ https://xcenweb.github.io/docs/doveapi/
 # 💻 QQ部落
 
 https://qun.qq.com/qqweb/qunpro/share?inviteCode=20BHjqDMEmV&businessType=9
+
+[![Star History Chart](https://api.star-history.com/svg?repos=xcenweb/DoveAPI&type=Date)](https://star-history.com/#xcenweb/DoveAPI&Date)
